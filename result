@@ -1,0 +1,116 @@
+[2026-02-17 06:56:37 UTC] vcs -full64 -licqueue '-timescale=1ns/1ns' '+vcs+flush+all' '+warn=all' '-sverilog' design.sv testbench.sv  && ./simv +vcs+lic+wait  
+                         Chronologic VCS (TM)
+       Version X-2025.06-SP1_Full64 -- Tue Feb 17 01:56:38 2026
+
+                    Copyright (c) 1991 - 2025 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Parsing design file 'design.sv'
+Parsing design file 'testbench.sv'
+Parsing included file 'interface.sv'.
+Back to file 'testbench.sv'.
+Parsing included file 'test.sv'.
+Parsing included file 'enivornment.sv'.
+Parsing included file 'transaction.sv'.
+Back to file 'enivornment.sv'.
+Parsing included file 'generator.sv'.
+Back to file 'enivornment.sv'.
+Parsing included file 'driver.sv'.
+Back to file 'enivornment.sv'.
+Parsing included file 'monitor.sv'.
+Back to file 'enivornment.sv'.
+Parsing included file 'reference.sv'.
+Back to file 'enivornment.sv'.
+Parsing included file 'scoreboard.sv'.
+Back to file 'enivornment.sv'.
+Back to file 'test.sv'.
+Back to file 'testbench.sv'.
+Top Level Modules:
+       tb
+TimeScale is 1 ns / 1 ns
+Notice: Ports coerced to inout, use -notice for details
+Starting vcs inline pass...
+4 modules and 0 UDP read.
+recompiling module asynfifo
+recompiling module intf
+recompiling module test
+recompiling module tb
+All of 4 modules done
+rm -f _cuarc*.so _csrc*.so pre_vcsobj_*.so share_vcsobj_*.so
+if [ -x ../simv ]; then chmod a-x ../simv; fi
+g++  -o ../simv      -rdynamic  -Wl,-rpath='$ORIGIN'/simv.daidir -Wl,-rpath=./simv.daidir -Wl,-rpath=/apps/vcsmx/vcs/X-2025.06-SP1/linux64/lib -L/apps/vcsmx/vcs/X-2025.06-SP1/linux64/lib  -Wl,-rpath-link=./   objs/amcQw_d.o  _286_archive_1.so  SIM_l.o       rmapats_mop.o rmapats.o rmar.o rmar_nd.o  rmar_llvm_0_1.o rmar_llvm_0_0.o            -lvirsim -lerrorinf -lsnpsmalloc -lvfs      -lvcsnew -ldistsimclient -lsimprofile -luclinative /apps/vcsmx/vcs/X-2025.06-SP1/linux64/lib/vcs_tls.o   -Wl,-whole-archive  -lvcsucli    -Wl,-no-whole-archive          /apps/vcsmx/vcs/X-2025.06-SP1/linux64/lib/vcs_save_restore_new.o -ldl  -lc -lm -lpthread -ldl 
+../simv up to date
+CPU time: .671 seconds to compile + .670 seconds to elab + .341 seconds to link
+Chronologic VCS simulator copyright 1991-2025
+Contains Synopsys proprietary information.
+Compiler version X-2025.06-SP1_Full64; Runtime version X-2025.06-SP1_Full64;  Feb 17 01:56 2026
+[GEN] wen=1 ren=0 wdata=28 rdata=0 full=0 empty=0 overflow=0 underflow=0
+[GEN] wen=0 ren=1 wdata=df rdata=0 full=0 empty=0 overflow=0 underflow=0
+[GEN] wen=0 ren=1 wdata=b8 rdata=0 full=0 empty=0 overflow=0 underflow=0
+[GEN] wen=1 ren=0 wdata=11 rdata=0 full=0 empty=0 overflow=0 underflow=0
+[GEN] wen=0 ren=1 wdata=5c rdata=0 full=0 empty=0 overflow=0 underflow=0
+[GEN] wen=0 ren=1 wdata=22 rdata=0 full=0 empty=0 overflow=0 underflow=0
+[GEN] wen=1 ren=0 wdata=47 rdata=0 full=0 empty=0 overflow=0 underflow=0
+[GEN] wen=1 ren=0 wdata=19 rdata=0 full=0 empty=0 overflow=0 underflow=0
+[GEN] wen=0 ren=1 wdata=c2 rdata=0 full=0 empty=0 overflow=0 underflow=0
+[GEN] wen=0 ren=1 wdata=d1 rdata=0 full=0 empty=0 overflow=0 underflow=0
+[DRV] wen=1 ren=0 wdata=28 rdata=0 full=0 empty=0 overflow=0 underflow=0
+[MON] wen=1 ren=0 wdata=28 rdata=0 full=0 empty=0 overflow=0 underflow=0
+28 data written inside fifo
+[SCB] wen=1 ren=0 wdata=28 rdata=0 full=0 empty=0 overflow=0 underflow=0
+[DRV] wen=0 ren=1 wdata=df rdata=0 full=0 empty=0 overflow=0 underflow=0
+[MON] wen=0 ren=1 wdata=0 rdata=28 full=0 empty=1 overflow=0 underflow=0
+[SCB] wen=0 ren=1 wdata=0 rdata=28 full=0 empty=1 overflow=0 underflow=0
+SCB: Comparison Passed act_data=28 exp_data=28
+[DRV] wen=0 ren=1 wdata=b8 rdata=0 full=0 empty=0 overflow=0 underflow=0
+[MON] wen=0 ren=1 wdata=0 rdata=28 full=0 empty=1 overflow=0 underflow=1
+[SCB] wen=0 ren=1 wdata=0 rdata=28 full=0 empty=1 overflow=0 underflow=1
+SCB: Comparison Passed act_data=28 exp_data=28
+[DRV] wen=1 ren=0 wdata=11 rdata=0 full=0 empty=0 overflow=0 underflow=0
+[DRV] wen=0 ren=1 wdata=5c rdata=0 full=0 empty=0 overflow=0 underflow=0
+[MON] wen=0 ren=1 wdata=0 rdata=11 full=0 empty=0 overflow=0 underflow=1
+[SCB] wen=0 ren=1 wdata=0 rdata=11 full=0 empty=0 overflow=0 underflow=1
+SCB: Comparison Passed act_data=11 exp_data=11
+[DRV] wen=0 ren=1 wdata=22 rdata=0 full=0 empty=0 overflow=0 underflow=0
+[MON] wen=0 ren=1 wdata=0 rdata=11 full=0 empty=1 overflow=0 underflow=1
+[SCB] wen=0 ren=1 wdata=0 rdata=11 full=0 empty=1 overflow=0 underflow=1
+SCB: Comparison Passed act_data=11 exp_data=11
+[DRV] wen=1 ren=0 wdata=47 rdata=0 full=0 empty=0 overflow=0 underflow=0
+[MON] wen=1 ren=0 wdata=47 rdata=0 full=0 empty=0 overflow=0 underflow=0
+22 data written inside fifo
+[SCB] wen=1 ren=0 wdata=47 rdata=0 full=0 empty=0 overflow=0 underflow=0
+[DRV] wen=1 ren=0 wdata=19 rdata=0 full=0 empty=0 overflow=0 underflow=0
+[MON] wen=1 ren=0 wdata=19 rdata=0 full=0 empty=0 overflow=0 underflow=0
+47 data written inside fifo
+[SCB] wen=1 ren=0 wdata=19 rdata=0 full=0 empty=0 overflow=0 underflow=0
+[DRV] wen=0 ren=1 wdata=c2 rdata=0 full=0 empty=0 overflow=0 underflow=0
+[MON] wen=0 ren=1 wdata=0 rdata=47 full=0 empty=0 overflow=0 underflow=1
+[SCB] wen=0 ren=1 wdata=0 rdata=47 full=0 empty=0 overflow=0 underflow=1
+SCB: Comparison Passed act_data=47 exp_data=47
+[DRV] wen=0 ren=1 wdata=d1 rdata=0 full=0 empty=0 overflow=0 underflow=0
+[MON] wen=0 ren=1 wdata=0 rdata=19 full=0 empty=0 overflow=0 underflow=1
+[SCB] wen=0 ren=1 wdata=0 rdata=19 full=0 empty=0 overflow=0 underflow=1
+SCB: Comparison Passed act_data=19 exp_data=19
+$finish called from file "testbench.sv", line 21.
+$finish at simulation time                 1010
+           V C S   S i m u l a t i o n   R e p o r t 
+Time: 1010 ns
+CPU Time:      0.470 seconds;       Data structure size:   0.0Mb
+Tue Feb 17 01:56:40 2026
+Finding VCD file...
+./dump.vcd
+[2026-02-17 06:56:40 UTC] Opening EPWave...
+Done
